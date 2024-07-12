@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Safety Checker</title>
+<script>
+    function checkSafety(url) {
+        // Here, you would implement your logic to check if the website is safe or not.
+        // For demonstration purposes, let's assume a simple check.
+        if (url.includes("https")) {
+            document.getElementById("result").innerHTML = "<span style='color:green;'>This website is safe.</span>";
+        } else {
+            document.getElementById("result").innerHTML = "<span style='color:red;'>This website is not safe.</span>";
+        }
+    }
+</script>
+</head>
+<body style="background-color: #f0f0f0; color: #333; font-family: Arial, sans-serif;">
+
+<div style="text-align: center; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <h1 style="color: #555;">Website Safety Checker</h1>
+    <p>Welcome to our Website Safety Checker tool. Enter a website URL below to check if it's safe or not.</p>
+    <input type="text" id="urlInput" placeholder="Enter website URL" style="padding: 10px; width: 300px; border: 1px solid #ccc; border-radius: 5px;">
+    <button onclick="checkSafety(document.getElementById('urlInput').value)" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Check</button>
+    <div id="result" style="margin-top: 20px;"></div>
+</div>
+
+<!-- Placeholder image for illustration -->
+<img src="C:\Users\GAYATHRI D\Downloads\shutterstock_1165944355-1-1136x639.jpg" alt="Website Safety" style="display:block; margin-top: 20px; margin-left: auto; margin-right: auto;">
+</body>
+</html>
