@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Detection</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Phishing Detection</h1>
+    <input type="text" id="urlInput" placeholder="Enter URL">
+    <button onclick="predict()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function predict() {
+            var url = $('#urlInput').val();
+            $.ajax({
+                type: 'POST',
+                url: '/predict',
+                contentType: 'application/json',
+                data: JSON.stringify({ 'url': url }),
+                success: function(response) {
+                    $('#result').text('Prediction: ' + response.prediction);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
